@@ -8,7 +8,7 @@ namespace _1415_lab_03
 {
     public interface IShape
     {
-        public Point Origin { get; init; }
+        public TranslateTransform Origin { get; init; }
         public Brush Fill { get; init; }
         public Brush Stroke { get; init; }
         public int StrokeThickness { get; init; }
@@ -21,13 +21,13 @@ namespace _1415_lab_03
         {
         }
 
-        public Square(Point origin, int sideLength)
+        public Square(TranslateTransform origin, int sideLength)
         {
             Origin = origin;
             SideLength = sideLength;
         }
         public int SideLength { get; init; }
-        public Point Origin { get; init; }
+        public TranslateTransform Origin { get; init; }
         public Brush Fill { get; init; }
         public Brush Stroke { get; init; }
         public int StrokeThickness { get; init; }

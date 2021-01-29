@@ -30,8 +30,8 @@ namespace _1415_lab_03
         {
             var squares = new[]
             {
-                new Square(new Point(50,-50), 100){Stroke = Brushes.Black, Fill = Brushes.AliceBlue },
-                new Square(new Point(250,250), 70){Stroke = Brushes.Yellow, Fill=Brushes.BlueViolet },
+                new Square(new TranslateTransform(50, 0), 100){Stroke = Brushes.Black, Fill = Brushes.AliceBlue },
+                new Square(new TranslateTransform(50, 250), 70){Stroke = Brushes.Yellow, Fill=Brushes.BlueViolet },
             };
 
             foreach(var s in squares)
@@ -42,9 +42,10 @@ namespace _1415_lab_03
                     Fill = s.Fill,
                     Height=s.SideLength,
                     Width=s.SideLength,
-                    
+                    RenderTransform = s.Origin
                 });
 
+                
             }
         }
     }
