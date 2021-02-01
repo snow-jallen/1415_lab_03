@@ -87,4 +87,23 @@ namespace _1415_lab_03
     public class Circle : Ellipse
     {
     }
+
+    public class Triangle : IShape
+    {
+        public TranslateTransform Origin { get; init; }
+        public Brush Fill { get; init; }
+        public Brush Stroke { get; init; }
+        public int StrokeThickness { get; init; }
+
+        public int Base { get; init; }
+
+        public int Height { get; init; }
+
+
+
+        public decimal CalculateArea()
+        {
+            throw new NotImplementedException();
+        }
+    }
 }

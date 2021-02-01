@@ -47,6 +47,14 @@ namespace _1415_lab_03
                     StrokeThickness = 20,
                     Width = 25,
                     Height = 35,
+                },
+                new Triangle
+                {
+                    Origin = new TranslateTransform {X = 250, Y = 250},
+                    Fill = Brushes.DarkSlateBlue,
+                    Stroke = Brushes.HotPink,
+                    Base = 20,
+                    Height = 15
                 }
             };
         }

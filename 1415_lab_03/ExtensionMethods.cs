@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Media;
 using System.Windows.Shapes;
 
 namespace _1415_lab_03
@@ -57,6 +59,23 @@ namespace _1415_lab_03
             };
         }
 
+        public static Polygon ToPolygon(this Triangle triangle)
+        {
+            var points = new PointCollection();
+
+            points.Add(new Point(triangle.Origin.X + 0.5 * triangle.Base, triangle.Origin.Y + 0.5 * triangle.Height));
+            points.Add(new Point(triangle.Origin.X, triangle.Origin.Y - 0.5 * triangle.Height));
+            points.Add(new Point(triangle.Origin.X - 0.5 * triangle.Base, triangle.Origin.Y + 0.5 * triangle.Height));
+
+
+
+            return new Polygon
+            {
+                Stroke = triangle.Stroke,
+                Fill = triangle.Fill,
+                Points = points
+            };
+        }
 
     }
 }

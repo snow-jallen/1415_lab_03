@@ -44,6 +44,9 @@ namespace _1415_lab_03
                     case Ellipse ellipse:
                         canvas.Children.Add(ellipse.ToEllipse());
                         break;
+                    case Triangle triangle:
+                        canvas.Children.Add(triangle.ToPolygon());
+                        break;
                     
                 }
 
