@@ -8,7 +8,7 @@ namespace _1415_lab_03
 {
     public interface IShape
     {
-        public TranslateTransform Origin { get; init; }
+        public Point Origin { get; init; }
         public Brush Fill { get; init; }
         public Brush Stroke { get; init; }
         public int StrokeThickness { get; init; }
@@ -21,14 +21,14 @@ namespace _1415_lab_03
         {
         }
 
-        public Square(TranslateTransform origin, int sideLength)
+        public Square(Point origin, int sideLength)
         {
             Origin = origin;
             SideLength = sideLength;
         }
 
         public int SideLength { get; init; }
-        public TranslateTransform Origin { get; init; }
+        public Point Origin { get; init; }
         public Brush Fill { get; init; }
         public Brush Stroke { get; init; }
         public int StrokeThickness { get; init; }
@@ -45,7 +45,7 @@ namespace _1415_lab_03
         {
         }
 
-        public Rectangle(TranslateTransform origin, int length, int width)
+        public Rectangle(Point origin, int length, int width)
         {
             Origin = origin;
             Height = length;
@@ -53,10 +53,8 @@ namespace _1415_lab_03
         }
 
         public int Height { get; init; }
-
         public int Width { get; init; }
-        
-        public TranslateTransform Origin { get; init; }
+        public Point Origin { get; init; }
         public Brush Fill { get; init; }
         public Brush Stroke { get; init; }
         public int StrokeThickness { get; init; }
@@ -69,7 +67,7 @@ namespace _1415_lab_03
 
     public class Ellipse : IShape
     {
-        public TranslateTransform Origin { get; init; }
+        public Point Origin { get; init; }
         public Brush Fill { get; init; }
         public Brush Stroke { get; init; }
         public int StrokeThickness { get; init; }
@@ -90,7 +88,7 @@ namespace _1415_lab_03
 
     public class Triangle : IShape
     {
-        public TranslateTransform Origin { get; init; }
+        public Point Origin { get; init; }
         public Brush Fill { get; init; }
         public Brush Stroke { get; init; }
         public int StrokeThickness { get; init; }

@@ -19,7 +19,7 @@ namespace _1415_lab_03
                 Fill = square.Fill,
                 Height = square.SideLength,
                 Width = square.SideLength,
-                RenderTransform = square.Origin
+                RenderTransform = new TranslateTransform(square.Origin.X, square.Origin.Y)
             };
         }
 
@@ -31,7 +31,7 @@ namespace _1415_lab_03
                 Fill = rect.Fill,
                 Height = rect.Height,
                 Width = rect.Width,
-                RenderTransform = rect.Origin
+                RenderTransform = new TranslateTransform(rect.Origin.X, rect.Origin.Y)
             };
         }
 
@@ -43,7 +43,7 @@ namespace _1415_lab_03
                 Fill = circle.Fill,
                 Width = circle.Radius1,
                 Height = circle.Radius2,
-                RenderTransform = circle.Origin
+                RenderTransform = new TranslateTransform(circle.Origin.X, circle.Origin.Y)
             };
         }
 
@@ -55,7 +55,7 @@ namespace _1415_lab_03
                 Fill = ellipse.Fill,
                 Width = ellipse.Radius1,
                 Height = ellipse.Radius2,
-                RenderTransform = ellipse.Origin
+                RenderTransform = new TranslateTransform(ellipse.Origin.X, ellipse.Origin.Y)
             };
         }
 
@@ -66,7 +66,6 @@ namespace _1415_lab_03
             points.Add(new Point(triangle.Origin.X + 0.5 * triangle.Base, triangle.Origin.Y + 0.5 * triangle.Height));
             points.Add(new Point(triangle.Origin.X, triangle.Origin.Y - 0.5 * triangle.Height));
             points.Add(new Point(triangle.Origin.X - 0.5 * triangle.Base, triangle.Origin.Y + 0.5 * triangle.Height));
-
 
 
             return new Polygon

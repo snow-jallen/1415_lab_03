@@ -28,7 +28,7 @@ namespace _1415_lab_03
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
 
-            foreach(var s in Program.DisplayShapes())
+            foreach(var s in ShapeGenerator.CreateShapes())
             {
                 switch(s)
                 {
@@ -47,7 +47,6 @@ namespace _1415_lab_03
                     case Triangle triangle:
                         canvas.Children.Add(triangle.ToPolygon());
                         break;
-                    
                 }
 
             }
