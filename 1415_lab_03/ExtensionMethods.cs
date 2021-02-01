@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _1415_lab_03.Shapes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,7 +8,7 @@ using System.Windows;
 using System.Windows.Media;
 using System.Windows.Shapes;
 
-namespace _1415_lab_03
+namespace _1415_lab_03.Shapes
 {
     public static class ExtensionMethods
     {
@@ -17,8 +18,8 @@ namespace _1415_lab_03
             {
                 Stroke = square.Stroke,
                 Fill = square.Fill,
-                Height = square.SideLength,
-                Width = square.SideLength,
+                Height = square.Height,
+                Width = square.Width,
                 RenderTransform = new TranslateTransform(square.Origin.X, square.Origin.Y)
             };
         }

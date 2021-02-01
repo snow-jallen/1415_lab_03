@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _1415_lab_03.Shapes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,48 +14,34 @@ namespace _1415_lab_03
         public static IEnumerable<IShape> CreateShapes()
         {
             return new IShape[] {
-                new Circle
+                new Circle(new Point(50, 50), 15)
                 {
-                    Origin = new Point(50, 50),
                     Fill = Brushes.Black,
                     Stroke = Brushes.Violet,
                     StrokeThickness = 10,
-                    Radius1 = 15,
-                    Radius2 = 15,
                 },
-                new Square
+                new Square(new Point{ X = 100, Y = 100}, 20)
                 {
-                    Origin = new Point{ X = 100, Y = 100},
                     Fill = Brushes.Blue,
                     Stroke = Brushes.DarkSalmon,
                     StrokeThickness = 15,
-                    SideLength = 20
                 },
-                new Ellipse
+                new Ellipse(new Point { X = 150, Y = 150}, 20, 35)
                 {
-                    Origin = new Point { X = 150, Y = 150},
                     Fill = Brushes.Red,
                     Stroke = Brushes.Honeydew,
-                    StrokeThickness = 15,
-                    Radius1 = 20,
-                    Radius2 = 35
+                    StrokeThickness = 15
                 },
-                new Rectangle
+                new Rectangle(new Point {X = 200, Y = 200}, 35, 25)
                 {
-                    Origin = new Point {X = 200, Y = 200},
                     Fill = Brushes.LightCyan,
                     Stroke = Brushes.Indigo,
-                    StrokeThickness = 20,
-                    Width = 25,
-                    Height = 35,
+                    StrokeThickness = 20
                 },
-                new Triangle
+                new Triangle(new Point {X = 350, Y = 350}, 20, 15)
                 {
-                    Origin = new Point {X = 350, Y = 350},
                     Fill = Brushes.DarkSlateBlue,
                     Stroke = Brushes.HotPink,
-                    Base = 20,
-                    Height = 15
                 }
             };
         }
