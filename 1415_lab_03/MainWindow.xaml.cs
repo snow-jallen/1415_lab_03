@@ -11,7 +11,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace _1415_lab_03
 {
@@ -28,24 +27,26 @@ namespace _1415_lab_03
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            var squares = new[]
-            {
-                new Square(new TranslateTransform(50, 0), 100){Stroke = Brushes.Black, Fill = Brushes.AliceBlue },
-                new Square(new TranslateTransform(50, 250), 70){Stroke = Brushes.Yellow, Fill=Brushes.BlueViolet },
-            };
 
-            foreach(var s in squares)
+            foreach(var s in Program.DisplayShapes())
             {
-                canvas.Children.Add(new Rectangle
+                switch(s)
                 {
-                    Stroke = s.Stroke,
-                    Fill = s.Fill,
-                    Height=s.SideLength,
-                    Width=s.SideLength,
-                    RenderTransform = s.Origin
-                });
+                    case Square square:
+                        canvas.Children.Add(square.ToRectangle());
+                        break;
+                    case Rectangle rectangle:
+                        canvas.Children.Add(rectangle.ToRectangle());
+                        break;
+                    case Circle circle:
+                        canvas.Children.Add(circle.ToEllipse());
+                        break;
+                    case Ellipse ellipse:
+                        canvas.Children.Add(ellipse.ToEllipse());
+                        break;
+                    
+                }
 
-                
             }
         }
     }
